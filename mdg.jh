@@ -1,0 +1,16 @@
+entity User {
+  // Propriétés existantes de l'entité User
+  login String unique,
+  password String,
+  activated Boolean,
+}
+
+entity Subscription {
+  startDate LocalDate,
+  endDate LocalDate,
+  active Boolean
+}
+
+relationship OneToOne {
+  User{subscription(login)} to Subscription
+}
