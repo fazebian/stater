@@ -1,0 +1,42 @@
+{
+  "applications": "*",
+  "entityTableName": "subscriber",
+  "fields": [
+    {
+      "fieldName": "msisdnNo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "imsi",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "balance",
+      "fieldType": "Double"
+    }
+  ],
+  "name": "Subscriber",
+  "relationships": [
+    {
+      "otherEntityName": "userSubscription",
+      "otherEntityRelationshipName": "subscriber",
+      "relationshipName": "userSubscription",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "person",
+      "otherEntityRelationshipName": "subscriber",
+      "relationshipName": "person",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "userSubscription",
+      "otherEntityRelationshipName": "subscriber",
+      "relationshipName": "userSubscription",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ]
+}

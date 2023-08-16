@@ -1,0 +1,38 @@
+{
+  "applications": "*",
+  "entityTableName": "good",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "Good",
+  "relationships": [
+    {
+      "otherEntityName": "goodType",
+      "otherEntityRelationshipName": "good",
+      "relationshipName": "goodType",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "offer",
+      "otherEntityRelationshipName": "good",
+      "relationshipName": "offer",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "offer",
+      "otherEntityRelationshipName": "good",
+      "relationshipName": "offer",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ]
+}
