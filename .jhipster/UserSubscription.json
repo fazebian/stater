@@ -1,0 +1,51 @@
+{
+  "applications": "*",
+  "entityTableName": "user_subscription",
+  "fields": [
+    {
+      "fieldName": "startDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "cost",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "discountAmount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Status",
+      "fieldValues": "ACTIVE,TERMINATED,SUSPENDED"
+    }
+  ],
+  "name": "UserSubscription",
+  "relationships": [
+    {
+      "otherEntityName": "subscriber",
+      "otherEntityRelationshipName": "userSubscription",
+      "relationshipName": "subscriber",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "offer",
+      "otherEntityRelationshipName": "userSubscription",
+      "relationshipName": "offer",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "subscriber",
+      "otherEntityRelationshipName": "userSubscription",
+      "relationshipName": "subscriber",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ]
+}

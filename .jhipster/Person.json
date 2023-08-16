@@ -1,0 +1,28 @@
+{
+  "applications": "*",
+  "entityTableName": "person",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "surname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "birthdate",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "name": "Person",
+  "relationships": [
+    {
+      "otherEntityName": "subscriber",
+      "otherEntityRelationshipName": "person",
+      "relationshipName": "subscriber",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ]
+}

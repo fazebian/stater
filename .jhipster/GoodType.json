@@ -1,0 +1,20 @@
+{
+  "applications": "*",
+  "entityTableName": "good_type",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "name": "GoodType",
+  "relationships": [
+    {
+      "otherEntityName": "good",
+      "otherEntityRelationshipName": "goodType",
+      "relationshipName": "good",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ]
+}

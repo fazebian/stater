@@ -1,0 +1,66 @@
+{
+  "applications": "*",
+  "entityTableName": "offer",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "startDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "subscriptionPeriod",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "chargingPeriod",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "recurring",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "secondSubscription",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Offer",
+  "relationships": [
+    {
+      "otherEntityName": "good",
+      "otherEntityRelationshipName": "offer",
+      "relationshipName": "good",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "userSubscription",
+      "otherEntityRelationshipName": "offer",
+      "relationshipName": "userSubscription",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "good",
+      "otherEntityRelationshipName": "offer",
+      "relationshipName": "good",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ]
+}
